@@ -1,1 +1,1 @@
-REACT_APP_API_URL=https://charity-service.herokuapp.com/api npm start
+REACT_APP_API_URL=http://localhost:4000/api npm start

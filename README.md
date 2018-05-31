@@ -8,9 +8,9 @@ Assumption: You have node.js, npm etc installed.
 2. Install the dependencies
 ```$ npm install ```
 3. You need to set charity-service-url which will server as backend service for this UI application.
-```REACT_APP_API_URL=https://<server>:<port>/api
+```REACT_APP_API_URL=https://<server>:<port>/api```
 e.g.
-REACT_APP_API_URL=http://localhost:4000/api```
+```REACT_APP_API_URL=http://localhost:4000/api```
 4. Start the application
 ```REACT_APP_API_URL=https://<server>:<port>/api npm start```
 There is also runapp.sh which has this command listed. So you could run

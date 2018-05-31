@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-require('dotenv').config();
-
 export const CREATE_USER = 'create_user';
 export const GET_USER = 'get_user';
 export const CHANGE_PASSWORD = 'change_password';

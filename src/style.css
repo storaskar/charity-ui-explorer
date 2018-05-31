@@ -1,0 +1,45 @@
+form a {
+  margin-left: 5px;
+}
+form h2 {
+  margin: 20px 0px;
+}
+.navbar-nav .nav-item {
+    font-size: 13px;
+}
+.welcome {
+  color: #0275d8;
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding: 10px 2px;
+}
+.container {
+  background-color: #eee;
+  padding: 40px;
+  min-height: 600px;
+}
+.card {
+  padding: 20px;
+}
+.navbar-dark {
+  background-color: #343a40!important
+}
+.navbar-nav .logout {
+  float: right;
+}
+.charity-container {
+  margin-top: 20px;
+}
+.charity-container h3 {
+  padding: 10px 10px;
+  color: #303030;
+}
+.donationSection {
+  padding: 0px 10px
+}
+.donationSection .btn {
+  margin: 25px 10px 0px 0px;
+}
+.donationSection h4 {
+  margin-top: 20px;
+}

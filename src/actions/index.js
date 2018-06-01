@@ -120,7 +120,7 @@ export function getDonations(userId) {
 export function deleteDonation(id, callback) {
   const request = axios.delete(`${REACT_APP_API_URL}/donations/${id}`)
     .then(()=>callback());
-  console.log(request);
+  // console.log(request);
   return {
     type: DELETE_DONATION,
     payload: id

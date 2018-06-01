@@ -24,7 +24,7 @@ export default class NavBar extends Component {
       return (
         <div>
         <nav className="navbar navbar-dark bg-dark">
-          <a className="navbar-brand" href="/charities">Charity Explorer</a>
+          <div className="navbar-brand">Charity Explorer</div>
 
           <div className="navbar-nav">
               <div className="pull-xs-right">

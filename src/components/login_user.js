@@ -41,6 +41,7 @@ class AuthenticateUser extends Component {
     this.setState({progressMsg: 'Authenticating...'});
     this.props.authenticate(values, (err, response) => {
       if (err) {
+        this.setState({progressMsg: ''});
         this.setState({errorMsg: 'Wrong Username/Password !'});
       }
       else {

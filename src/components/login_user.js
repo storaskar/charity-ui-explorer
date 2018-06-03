@@ -76,7 +76,7 @@ class AuthenticateUser extends Component {
                 <button type="submit" className="btn btn-primary">Login</button>
                 <Link to="/user/register" className="btn btn-secondary">Register</Link>
               </form>
-              <RenderProgress errorMsg={this.state.progressMsg} />
+              <RenderProgress progressMsg={this.state.progressMsg} />
           </div>
       );
     }
@@ -87,7 +87,7 @@ function RenderProgress(props) {
     return <div></div>;
   }
   return (
-    <p className='alert alert-danger'>
+    <p className='alert-info'>
       {props.progressMsg}
     </p>
   );

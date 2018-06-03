@@ -38,11 +38,17 @@ class AuthenticateUser extends Component {
   }
 
   onSubmit(values) {
+    this.setState({progressMsg: 'Authenticating...'});
     this.props.authenticate(values, (err, response) => {
       if (err) {
         this.setState({errorMsg: 'Wrong Username/Password !'});
       }
       else {
+        this.setState({progressMsg: ''});
+
+        localStorage.setItem("userId", response.data._id);
+        localStorage.setItem("loggedUser", response.data.userName);
+
         this.props.history.push('/charities');
       }
     });
@@ -51,7 +57,7 @@ class AuthenticateUser extends Component {
 
   render() {
       const { handleSubmit } = this.props;
-      
+
       return (
           <div className="col-md-6 col-md-offset-3">
               <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -70,9 +76,21 @@ class AuthenticateUser extends Component {
                 <button type="submit" className="btn btn-primary">Login</button>
                 <Link to="/user/register" className="btn btn-secondary">Register</Link>
               </form>
+              <RenderProgress errorMsg={this.state.progressMsg} />
           </div>
       );
     }
+}
+
+function RenderProgress(props) {
+  if (!props.progressMsg) {
+    return <div></div>;
+  }
+  return (
+    <p className='alert alert-danger'>
+      {props.progressMsg}
+    </p>
+  );
 }
 
 function RenderError(props) {

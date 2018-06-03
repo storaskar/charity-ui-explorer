@@ -59,9 +59,6 @@ export function changePassword(values, callback) {
 export function authenticate(values, callback) {
   const request = axios.post(`${REACT_APP_API_URL}/users/authenticate`, values)
     .then( response  => {
-        localStorage.setItem("userId", response.data._id);
-        localStorage.setItem("loggedUser", response.data.userName);
-
         callback(null, response);
     })
     .catch (error => {
